@@ -76,7 +76,12 @@ public class FlightController : MonoBehaviour
     
     if (Input.GetKey(KeyCode.Space))
     {
+      rb.useGravity = false;
       transform.Translate(Vector3.forward * thrustSpeed * Time.deltaTime);
+    }
+    else
+    {
+      rb.useGravity = true;
     }
   }
 }
